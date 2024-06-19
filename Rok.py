@@ -6,7 +6,7 @@ import keyboard
 import argparse
 
 running = True
-
+Default_Path = "C:\Users\J\Documents\Python"
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-a','--action', type=int)
@@ -54,7 +54,7 @@ def collect_vill():
         pass
     try:
         ReadyScout = pyautogui.locateCenterOnScreen(Default_Path+r"\Rok img\ex\ready_explore.png", confidence=.8)
-        pyautogui.leftClick(((ReadyScout[0]), (ReadyScout[1]+175)))#click open training
+        pyautogui.leftClick(((ReadyScout[0]), (ReadyScout[1]+200)))#click open training
         time.sleep(.8)
         try:
             OpenScout = pyautogui.locateCenterOnScreen(Default_Path+r"\Rok img\ex\open_scout.png", confidence=.8)
@@ -428,4 +428,6 @@ while running:
     
     check_training()
     
+  
+
   
